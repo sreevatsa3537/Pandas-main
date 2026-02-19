@@ -55,4 +55,5 @@ multi_index=pd.DataFrame({
     'visitors':[4000000,5000000,6000000,3000000,2000000]
 }).set_index(['park','state']) # To set multiple columns as index of dataframe
 print(multi_index)
-print(multi_index.loc[('Yellowstone','Wyoming')]) # To access the data using loc after setting multiple columns as index we can use the index names to access the data
+print(multi_index.loc[('Yellowstone','Wyoming')]) # To access the data using loc after setting multiple
+# columns as index we can use the index names to access the data
