@@ -57,3 +57,7 @@ multi_index=pd.DataFrame({
 print(multi_index)
 print(multi_index.loc[('Yellowstone','Wyoming')]) # To access the data using loc after setting multiple
 # columns as index we can use the index names to access the data
+## MOre simpler way to use selection with condition is to use query() method
+qry=multi_index.query('visitors>3000000') # To filter the data using query() method we can pass the condition as a string to query() method
+print(qry)
+print("_____________________-------------------------------------------")
