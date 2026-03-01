@@ -18,5 +18,24 @@ dict={
 df=pd.DataFrame(dict) # To create a dataframe from a dictionary
 print(df)
 narr=np.array([[1,2,3],[4,5,6],[7,8,9]]) # To create a dataframe from a numpy array
-df2=pd.DataFrame(narr,columns=['NA','NB','NC']) # To create a dataframe from a numpy array and assign column names to it
+df2=pd.DataFrame(narr,columns=['Numpy','Numpy','Numpy']) # To create a dataframe from a numpy array and assign column names to it
 print(df2)
+## data cleaning and preprocessing
+# Handeling missing values
+missing=pd.Series([1,2,None,4,5]) # To create a series with some missing values
+missing.dropna() # To drop the missing values from the series
+missing.fillna(0) # To fill the missing values with 0
+missing.fillna(missing.mean()) # To fill the missing values with the mean of the series
+# REmoving duplicates
+dup1=pd.Series([1,2,3,4,5,1,2,3]) # To create a series with some duplicate values
+dup2=pd.Series([1,20,3,40,5,1,20,3]) # To create another series with some duplicate values
+duplicate=pd.DataFrame({'C1':dup1,'C2':dup2}) # To create a dataframe from the two series
+print(duplicate.drop_duplicates()) # To drop the duplicate rows from the dataframe only 1 1,1 and 3,3 will be kept
+data.replace('k','M',regex=True,inplace=True) # To replace 'k' with 'M' in the salary column of the dataframe
+# regex= trues is imp cause there is no k seperately it is stuck with the number so we need to use regex to replace it
+print(data)
+# us .astype to convert the type from int to float or string to int etc
+
+########## STring Operations
+str1=pd.Series(['Hello World','Python is great','Data Science is fun']) # To create a series of strings
+print(str1.str.upper()) # To convert the strings to uppercase
