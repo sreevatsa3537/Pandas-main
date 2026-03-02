@@ -15,3 +15,6 @@ b=pd.Series(['A','B','A','C','B','C','A']) # To create another series of categor
 data2=pd.DataFrame({'Name':b,'Age':[25,30,35,40,45,50,55]}) # To create another dataframe from the series       
 con=pd.concat([data1,data2])
 print(con) # To concatenate the two dataframes it will combine the two dataframes vertically by default
+pd.merge(data1,data2,on='Name') # To merge the two dataframes on the 'Name' column it will combine the two dataframes based on the common values in the 'Name' column it will show only the rows where the 'Name' column has common values in both dataframes
+data1.join(data2.set_index9('Name'),on='Name') # To join the two dataframes on the 'Name' column it will combine the two dataframes based on the common values in the 'Name' column it will show all the rows from the left dataframe and the matching rows from the right dataframe it will show NaN for the non-matching rows in the right dataframe  
+# Diff bw merge and join is merge applys inner join by default and join applies left join by default but we can specify the type of join we want to apply in both merge and join functions
